@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <record id="action_todo_task" model="ir.actions.act_window">
+            <field name="name">MQTT Module</field>
+            <field name="res_model">sales.id</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="view_type">form</field>
+            <field name="context">{"search_default_filter_to_sell":1}</field>
+            <field name="help" type="html">
+                <p>here you write the help form your form</p>
+            </field>
+        </record>
+        <menuitem action="action_todo_task" id="menu_todo_task" sequence="20" name="Ribadev"/>
+
+        <record id="view_form_todo_task" model="ir.ui.view">
+            <field name="name">Task-Send-Form</field>
+            <field name="model">sales.id</field>
+            <field name="arch" type="xml">
+                <form string="To-do Task">
+                    <header>
+                        <button name="fer_2_peces" type="object"
+                                string="fer2peces" class="oe_highlight"/>
+
+                        <button name="fer_infinites" type="object"
+                                string="ferinfinites" class="oe_highlight"/>
+                        <button name="arrancar" type="object"
+                                string="arrancar" class="oe_highlight"/>
+                        <button name="parar" type="object"
+                                string="parar" class="oe_highlight"/>
+                        <button name="reset" type="object"
+                                string="reset" class="oe_highlight"/>
+                        <button name="emergencia" type="object"
+                                string="emergencia" class="oe_highlight"/>
+                        <button name="iniciar" type="object"
+                                string="iniciar" class="oe_highlight"/>
+
+
+                    </header>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="sale_order_id"/>
+                                <field name="product_count"/>
+                                <field name="state"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+
+        </record>
+    </data>
+</odoo>
